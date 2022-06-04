@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" hgap="10.0" stylesheets="@loginStyle.css" vgap="10.0" xmlns="http://javafx.com/javafx/11"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="AtmLogin.ATMController">
+  <columnConstraints>
+    <ColumnConstraints />
+    <ColumnConstraints />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="0.0" prefWidth="0.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+    <RowConstraints />
+    <RowConstraints />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+  </rowConstraints>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+   <children>
+      <TextField fx:id="username" GridPane.columnIndex="1" GridPane.rowIndex="1" onKeyPressed="#keyRelease"/>
+      <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="35.0" text="Username:" GridPane.rowIndex="1" />
+      <Label alignment="CENTER_RIGHT" layoutX="35.0" layoutY="75.0" text="Password:" GridPane.rowIndex="2" />
+      <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="2" onKeyPressed="#keyRelease"/>
+      <Text id="welcomeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" GridPane.columnSpan="2" />
+      <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <children>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#loginButtonPressed" prefWidth="50.0" text="Login" />
+            <Button fx:id="exitButton" layoutX="107.0" layoutY="10.0" mnemonicParsing="false" prefWidth="50.0" text="Exit" />
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Label fx:id="labeConnect" prefHeight="34.0" prefWidth="130.0" textFill="#bf1d1d" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   </children>
+</GridPane>
